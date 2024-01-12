@@ -1,37 +1,31 @@
+// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Education from './components/Education';
-import WorkExperience from './components/WorkExperience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './styles.css';
+import './css/styles.css';
+import linkedInIcon from './assets/linkedin_icon.png'; // Replace with the path to your image
+import githubIcon from './assets/github_icon.png'; // Replace with the path to your image
+import Greetings from './components/Greetings';
+// import profilePhoto from './photo.jpg'; // Replace with the path to your image
 
-const App = () => {
-  // const workExperiences = [
-  //   {
-  //     companyLogo: 'path/to/company1-logo.png',
-  //     role: 'Software Engineer Intern',
-  //     duration: 'Dec 2023 – Present',
-  //     details: [
-  //       'Worked on the GuardX project to simulate cyber attacks.',
-  //       'Streamlined workflows by implementing CI/CD pipelines.',
-  //       'Leveraged Elasticsearch, Logstash, Kibana stack for log analysis.',
-  //     ],
-  //   },
-  //   // Add more experiences as needed
-  // ];
-
+function App() {
   return (
-    <div>
-      <Header />        
-      <WorkExperience />        
-      <Contact />
-      <Education />
-      <Footer />
-    </div>
-    );
-  };
+    <div className="container">
+      <div className="intro">
+        <p>Hi, I'm an undergrad studying CS at University of Maryland - College Park!</p>
+      </div>
+      <div className="profile">
+        <h1>Siddharth Cherukupalli</h1>
+        <p>( Software Engineer / ML Researcher )</p>
+        <a href="resume.pdf" className="resume-button">Resumé</a>
+        <div className="social-links">
+          <a href="https://www.linkedin.com/in/siddharth-cherukupalli/"><img src={linkedInIcon} alt="LinkedIn" /></a>
+          <a href="https://www.github.com/s1ddh4rthc/"><img src={githubIcon} alt = "Github"></img></a>
+        </div>
+      </div>
+      <div className="about">
+      <Greetings />
+      </div>
+      </div> 
+  );
+}
 
 export default App;
-

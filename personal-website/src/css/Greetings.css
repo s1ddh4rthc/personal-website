@@ -1,0 +1,34 @@
+.greetings {
+  background-color: #333; /* Adjust color to match your design */
+  color: white;
+  padding: 20px;
+  border-radius: 10px; /* Adjust to match the curvature in your design */
+}
+
+.greetings h2 {
+  font-size: 1.5em;
+}
+
+.greetings .underline {
+  text-decoration: none;
+  position: relative;
+  color: #ffd700; /* Adjust color to match your design */
+}
+
+.greetings .underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffd700; /* Adjust color to match your design */
+  visibility: visible;
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.greetings .underline:hover::after {
+  visibility: hidden;
+  transform: scaleX(0);
+}
