@@ -1,0 +1,43 @@
+.project-card {
+  background-color: white;
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  overflow: hidden; /* Ensures the content fits within the rounded corners */
+  text-align: center; /* Centers the text within the card */
+  margin-bottom: 20px; /* Space between the cards when they wrap */
+  cursor: pointer; /* Indicates the card is clickable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Lifts the card up slightly on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+.project-image {
+  width: 100%; /* Ensures the image takes up the full width of the card */
+  height: auto; /* Maintains the aspect ratio of the image */
+  display: block; /* Ensures there are no gaps around the image */
+}
+
+.project-name {
+  padding: 10px; /* Adds padding inside the card below the image */
+  font-size: 1.2em; /* Sets the size of the project title */
+  font-weight: bold; /* Makes the project title bold */
+  color: #333; /* Sets the color of the project title text */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%; /* Takes more width on smaller screens */
+    margin: 10px auto; /* Centers the card with margin */
+  }
+}
+
+/* Adjustments for larger screens to set a max width */
+@media (min-width: 769px) {
+  .project-card {
+    width: 300px; /* Fixed width for larger */
+  }
+}
