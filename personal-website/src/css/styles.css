@@ -12,40 +12,110 @@ body, html {
   padding: 20px;
 }
 
-.intro, .profile, .about {
+.intro, .about {
   margin-bottom: 5px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will push children to the sides */
+}
+
+.profile-info {
+  /* If you want to keep the text aligned to the left, you can add text-align here */
+  text-align: left;
 }
 
 .profile h1 {
   font-size: 2.5em;
   color: #e7eeec;
-  margin-bottom: 10px; /* Reduced from 20px, adjust this value as needed */
+  margin: 0; /* No margin for the title to be closer to the profile image */
 }
 
 .profile p {
   font-size: 1.2em;
-  margin-top: 0px; /* Reduced or removed the top margin */
+  margin: 0; /* No additional margin for the subtitle */
 }
 
+.image-section {
+  order: 2; /* This will move the image to the right */
+}
+
+.image-section img {
+  border-radius: 50%; /* This will make the image circular */
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  object-fit: cover; /* This will ensure the image covers the area without stretching */
+  border: 3px solid white; /* Optional: Adds a border around the image */
+}
 
 .resume-button {
-  display: inline-block;
+  display: inline-flex; /* Use inline-flex if you want to align items within the button */
+  align-items: center; /* Center the items vertically */
+  justify-content: center; /* Center the items horizontally */
+  /* Rest of your styles */
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the space between buttons as needed */
+}
+
+.social-button {
   margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  background-color: transparent; /* Make the resume button background transparent */
+  border: 2px solid #fff; /* White border for the resume button */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Larger padding */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-flex; /* Inline flex to allow it to sit inline with other elements */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* If it's an anchor tag */
+  font-size: 1em; /* Adjust font size as needed */
 }
 
-.social-links a {
-  margin-right: 10px;
-}
-
-.social-links img {
-  width: 24px;
+.social-button img { /* Adjust if you are using images for icons */
+  width: 24px; /* Set the size of the icon */
   height: auto;
 }
+
+/* If you're using an <a> tag for buttons, remove the default text decoration */
+.social-button a {
+  text-decoration: none;
+  color: #fff; /* White text/icon color */
+}
+
+/* Adjust for the resume button which is wider and has text */
+.resume-button {
+  margin-top: 10px;
+  background-color: transparent; /* Make the resume button background transparent */
+  border: 2px solid #fff; /* White border for the resume button */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Larger padding */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-flex; /* Inline flex to allow it to sit inline with other elements */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* If it's an anchor tag */
+  font-size: 1em; /* Adjust font size as needed */
+}
+
+.resume-button:hover,
+.social-button:hover {
+  background-color: #fff; /* White background on hover for feedback */
+  color: #000; /* Black text/icon color on hover */
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+
+/* Ensure the icons/images inside the buttons invert color on hover */
+.social-button:hover img,
+.resume-button:hover img {
+  filter: invert(75%); /* Invert colors */
+}
+
 
 .ssh-command {
   margin-top: 20px;
@@ -59,27 +129,16 @@ body, html {
   margin-bottom: 10px;
 }
 
-.image-container {
-  text-align: center;
-  margin-top: 20px;
-}
+/* Additional styles if you have sections like education, experience, etc. */
 
-.image-container img {
-  border-radius: 50%;
-  width: 150px;
-  height: auto;
-}
+/* You can add media queries for responsiveness */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.profile-container {
-  display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between the name/title and the picture */
-}
-
-.image-section img {
-  width: 150px; /* Adjust the size as needed */
-  height: 150px; /* Adjust the size as needed */
-  border-radius: 50%; /* This will make the image circular */
-  object-fit: cover; /* This will ensure the image covers the area without stretching */
-  border: 3px solid white; /* Optional: Adds a border around the image */
+  .image-section img {
+    margin-bottom: 10px; /* Add some space below the image when stacked on top of the text */
+  }
 }

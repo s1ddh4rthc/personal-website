@@ -10,6 +10,8 @@ import Experience from './components/Experience';
 import CampusInvolvement from './components/CampusInvolvement';
 import ProjectsSection from './components/ProjectsSection';
 import techEnergy from './assets/tech_energy.png'
+import dishDrop from './assets/dish_drop.png'
+import ta_bot from './assets/ta_bot.png'
 
 const projects = [
   {
@@ -22,37 +24,30 @@ const projects = [
   {
     id: 2,
     name: 'Shell Project',
-    description: 'Created an entire Unix-like shell in C which supported pipe, I/O redirection, and other operations.',
+    description: 'Created an entire Unix-like shell in C which supported piping, subshells, I/O redirection, and other operations.',
     image: 'url-to-general-atomics-project-image.jpg',
-    codeUrl: 'https://github.com/your-username/general-atomics-project'
+    codeUrl: 'https://github.com/s1ddh4rthc/cs216/tree/main/216/projects/project6'
   },
   {
     id: 3,
     name: 'Document Manipulation System',
-    description: 'Assisted in machine learning research, focusing on algorithms for natural language processing and computer vision.',
+    description: 'Created a system that organizes and creates documents using dynamic memory allocation with a user-friendly command-line user interface.',
     image: 'url-to-umiacs-project-image.jpg',
-    codeUrl: 'https://github.com/your-username/umiacs-research-project'
+    codeUrl: 'https://github.com/s1ddh4rthc/cs216/tree/main/216/projects/project3'
   },
   {
     id: 4,
-    name: 'UMD STICs',
-    description: 'Facilitated a course on introductory computer science concepts and practical programming skills.',
-    image: 'url-to-umd-stics-project-image.jpg',
-    codeUrl: 'https://github.com/your-username/umd-stics-project'
+    name: 'Technical Analysis Slackbot',
+    description: 'Created a Slackbot that returns a buy/sell rating on an input ticker using Slack\'s API, with an architecture of AWS Lambda and S3.',
+    image: ta_bot,
+    codeUrl: 'https://github.com/apexfund/apex_dowbot'
   },
   {
     id: 5,
-    name: 'Apex Quant',
-    description: 'Led the Apex Quant team to develop innovative trading algorithms that analyze financial markets for optimal trades.',
-    image: 'url-to-apex-quant-project-image.jpg',
-    codeUrl: 'https://github.com/your-username/apex-quant-project'
-  },
-  {
-    id: 6,
-    name: 'Hack4Impact',
-    description: 'Developed software solutions for non-profit organizations to enhance their impact on social causes.',
-    image: 'url-to-hack4impact-project-image.jpg',
-    codeUrl: 'https://github.com/your-username/hack4impact-project'
+    name: 'Dish Drop',
+    description: '',
+    image: dishDrop,
+    codeUrl: 'https://github.com/s1ddh4rthc/dish-drop'
   }
 ];
 
@@ -64,19 +59,29 @@ function App() {
         <p>Hi, I'm an undergrad studying CS at University of Maryland - College Park!</p>
       </div>
       <div className="profile">
-        <h1>Siddharth Cherukupalli</h1>
-        <p>( Software Engineer / ML Researcher )</p>
+        <div className="profile-info">
+          <h1>Siddharth Cherukupalli</h1>
+          <p>( Software Engineer / ML Researcher )</p>
+          <div className="social-links">
+            <a href="/resume.pdf" className="resume-button" target="_blank" rel="noopener noreferrer">Resume / CV ></a>
+            <div className="social-button">
+              <a href="https://www.linkedin.com/in/siddharth-cherukupalli/" target="_blank" rel="noopener noreferrer">
+                <img src={linkedInIcon} alt="LinkedIn" />
+              </a>
+            </div>
+            <div className="social-button">
+              <a href="https://www.github.com/s1ddh4rthc/" target="_blank" rel="noopener noreferrer">
+                <img src={githubIcon} alt="GitHub" />
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="image-section">
           <img src={profilePic} alt="Siddharth Cherukupalli" />
         </div>
-        <a href="resume.pdf" className="resume-button">Resumé</a>
-        <div className="social-links">
-          <a href="https://www.linkedin.com/in/siddharth-cherukupalli/"><img src={linkedInIcon} alt="LinkedIn" /></a>
-          <a href="https://www.github.com/s1ddh4rthc/"><img src={githubIcon} alt = "Github"></img></a>
-        </div>
       </div>
       <div className="about">
-      <Greetings />
+        <Greetings />
       </div>
       <div className="education">
         <Education />
@@ -90,8 +95,7 @@ function App() {
       <div className="projects-section">
         <ProjectsSection projects={projects} />
       </div>
-      
-      </div> 
+    </div> 
   );
 }
 
