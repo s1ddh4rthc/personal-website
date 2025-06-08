@@ -13,8 +13,8 @@ export default function VantaBackground() {
         
         // Tweakable params
         
-        color: 0xffffff,        // main line/dot color
-        backgroundColor: 0xb1b1ca,
+        color: 0x0,        // main line/dot color
+        backgroundColor: 0xebebeb,
         backgroundAlpha: 1,     // let your gradient show through
         maxDistance: 20.0,     // link length
         spacing:     15.0,      // dot spacing
