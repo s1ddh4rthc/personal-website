@@ -91,11 +91,11 @@ export default function Experience() {
   return (
     <AnimatedSection id="experience" className="py-12">
       {/* Section Header */}
-      <h2 className="text-3xl font-bold text-center mb-8">💼 Experience</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 text-black dark:text-gray-100">💼 Experience</h2>
 
       <div className="relative max-w-4xl mx-auto">
         {/* Center line */}
-        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-black" />
+        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-black dark:bg-gray-100" />
 
         <div className="mt-8 space-y-16">
           {sortedYears.map((year) => (

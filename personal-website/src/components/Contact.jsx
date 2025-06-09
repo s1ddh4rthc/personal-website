@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 export default function Contact() {
     return (
         <AnimatedSection>
-            <section id="contact" className="py-12">
+            <section id="contact" className="py-12 text-black dark:text-gray-100">
                 <h2 className="text-3xl font-bold text-center mb-4">📬 Contact</h2>
                 <p className="text-center text-lg mb-6">
                 I’m always open to chatting about new projects, opportunities, or just saying hi!

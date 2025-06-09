@@ -39,7 +39,7 @@ export default function About() {
         </div>
 
         <div className="text-center md:text-left space-y-4">
-          <h1 className="text-4xl font-bold">Hi, I'm Siddharth.</h1>
+          <h1 className="text-4xl font-bold text-black dark:text-white">Hi, I'm Siddharth.</h1>
           
           {/* Rotating roles */}
           <h2 className="text-2xl font-semibold text-indigo-500 mt-1">
@@ -73,13 +73,13 @@ export default function About() {
           </div>
 
           {/* 4. Socials + actions */}
-          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mt-6">
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mt-6 text-black dark:text-white">
             <Github className="w-6 h-6 hover:text-indigo-500 transition-colors" />
             <Linkedin className="w-6 h-6 hover:text-indigo-500 transition-colors" />
             <Mail      className="w-6 h-6 hover:text-indigo-500 transition-colors" />
             <a
               href="/resume.pdf"
-              className="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-md hover:bg-indigo-600 hover:text-white transition-colors whitespace-nowrap"
+              className="px-4 py-2 border border-indigo-600 text-indigo-600 dark:text-white rounded-md hover:bg-indigo-600 hover:text-white transition-colors whitespace-nowrap"
             >
               Download Resume
             </a>

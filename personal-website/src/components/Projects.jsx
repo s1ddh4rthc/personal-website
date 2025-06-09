@@ -39,7 +39,7 @@ export default function Projects() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <AnimatedSection id="projects" className="py-12 relative">
+    <AnimatedSection id="projects" className="py-12 relative text-black dark:text-gray-100">
       <h2 className="text-3xl font-bold text-center mb-8">📁 Projects</h2>
 
       {/* 3-column grid of horizontal bars */}
