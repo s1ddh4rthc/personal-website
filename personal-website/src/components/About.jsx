@@ -6,7 +6,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import profilePic from '../assets/profile_pic.png';
 
 const roles = [
-  'Backend Services Engineer',
+  'Backend Software Engineer',
   'Cloud Infrastructure Advocate',
   'Distributed Systems Enthusiast',
 ];
