@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection"
+
 const projects = [
     {
       title: 'Tech-Energy Statistical Arbitrage',
@@ -27,27 +29,29 @@ const projects = [
   
   export default function Projects() {
     return (
-      <section id="projects" className="py-12">
-        <h2 className="text-3xl font-bold text-center mb-8">📁 Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <a
-              key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-6 border rounded-xl hover:shadow-lg bg-white dark:bg-gray-800 transition-all"
-            >
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-indigo-500 transition">
-                {project.title}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
-                {project.description}
-              </p>
-            </a>
-          ))}
-        </div>
-      </section>
+      <AnimatedSection>
+        <section id="projects" className="py-12">
+          <h2 className="text-3xl font-bold text-center mb-8">📁 Projects</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {projects.map((project, index) => (
+              <a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-6 border rounded-xl hover:shadow-lg bg-white dark:bg-gray-800 transition-all"
+              >
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-indigo-500 transition">
+                  {project.title}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  {project.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+      </AnimatedSection>
     )
   }
   
