@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 import TerminalIntro from './components/TerminalIntro'
+import SkillsRadar from './components/SkillsRadar';
 
 export default function App() {
 
@@ -27,6 +28,7 @@ export default function App() {
             <>
               <About />
               <Experience />
+              <SkillsRadar />
               <Projects />
               <Contact />    
             </>

@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react';
+// src/components/About.jsx
+import React from 'react';
 import AnimatedSection from './AnimatedSection';
 import Tilt from 'react-parallax-tilt';
 import { Typewriter } from 'react-simple-typewriter';
@@ -21,14 +22,12 @@ const skills = [
 ];
 
 export default function About() {
-
   return (
     <AnimatedSection id="about" className="relative py-16">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-        
-        {/* 1. Photo + decorative blob */}
+        {/* Photo + decorative blob */}
         <div className="relative">
-          <div className="absolute -top-4 -left-4 w-48 h-48 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-full filter blur-3xl opacity-50 animate-blob mix-blend-multiply"></div>
+          <div className="absolute -top-4 -left-4 w-48 h-48 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-full filter blur-3xl opacity-50 animate-blob mix-blend-multiply" />
           <Tilt glareEnable glareMaxOpacity={0.2} scale={1.02} transitionSpeed={250}>
             <img
               src={profilePic}
@@ -39,8 +38,10 @@ export default function About() {
         </div>
 
         <div className="text-center md:text-left space-y-4">
-          <h1 className="text-4xl font-bold text-black dark:text-white">Hi, I'm Siddharth.</h1>
-          
+          <h1 className="text-4xl font-bold text-black dark:text-white">
+            Hi, I’m Siddharth.
+          </h1>
+
           {/* Rotating roles */}
           <h2 className="text-2xl font-semibold text-indigo-500 mt-1">
             <Typewriter
@@ -60,9 +61,9 @@ export default function About() {
             B.S. in Computer Science, UMD College Park.
           </p>
 
-          {/* 3. Skill badges */}
+          {/* Skill badges */}
           <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-4">
-            {skills.map(skill => (
+            {skills.map((skill) => (
               <span
                 key={skill}
                 className="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 rounded-full text-sm"
@@ -72,11 +73,33 @@ export default function About() {
             ))}
           </div>
 
-          {/* 4. Socials + actions */}
-          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mt-6 text-black dark:text-white">
-            <Github className="w-6 h-6 hover:text-indigo-500 transition-colors" />
-            <Linkedin className="w-6 h-6 hover:text-indigo-500 transition-colors" />
-            <Mail      className="w-6 h-6 hover:text-indigo-500 transition-colors" />
+          {/* Socials + actions */}
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mt-6">
+            <a
+              href="https://github.com/s1ddh4rthc"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="text-black dark:text-white"
+            >
+              <Github className="w-6 h-6 hover:text-indigo-500 transition-colors" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/siddharth-cherukupalli/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-black dark:text-white"
+            >
+              <Linkedin className="w-6 h-6 hover:text-indigo-500 transition-colors" />
+            </a>
+            <a
+              href="mailto:siddharthscherukupalli@gmail.com"
+              aria-label="Email"
+              className="text-black dark:text-white"
+            >
+              <Mail className="w-6 h-6 hover:text-indigo-500 transition-colors" />
+            </a>
             <a
               href="/resume.pdf"
               className="px-4 py-2 border border-indigo-600 text-indigo-600 dark:text-white rounded-md hover:bg-indigo-600 hover:text-white transition-colors whitespace-nowrap"

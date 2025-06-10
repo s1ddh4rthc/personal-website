@@ -13,5 +13,9 @@ export default defineConfig({
         autoprefixer()
       ]
     }
-  }
+  },
+  optimizeDeps: {
+    exclude: ['@recharts'
+    ]
+  },
 })
