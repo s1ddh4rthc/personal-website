@@ -56,7 +56,7 @@ export default function Projects() {
           >
             <div
               onClick={() => setSelected(proj)}
-              className="flex h-64 md:h-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              className="flex h-64 md:h-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow transform hover:-translate-y-1 hover:shadow-md" // ADDED HOVER ANIMATION
             >
               {/* left image */}
               <img

@@ -1,4 +1,3 @@
-// src/components/Experience.jsx
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
@@ -95,7 +94,7 @@ export default function Experience() {
 
       <div className="relative max-w-4xl mx-auto">
         {/* Center line */}
-        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-black dark:bg-gray-100" />
+        <div className="absolute top-12 bottom-0 left-1/2 w-px bg-black dark:bg-gray-100" /> {/* ADJUSTED TOP VALUE */}
 
         <div className="mt-8 space-y-16">
           {sortedYears.map((year) => (
